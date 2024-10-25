@@ -1,0 +1,223 @@
+:root {
+  --colorBlack: #0b0c10;
+  --colorGray: #1f2833;
+  --colorLightGray:#c5c6c7;
+  --colorLightBlue:#66fcf1;
+  --colorBlue:#45a29e; }
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace; }
+
+body {
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  background-color: var(--colorGray); }
+
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 70px;
+  margin-top: 30px; }
+  .main__section {
+    width: 1200px;
+    background-color: #213234;
+    border: 4px solid #3b7a83;
+    border-radius: 20px;
+    padding: 10px 30px; }
+    .main__section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--colorLightBlue); }
+      .main__section-title-img {
+        width: 20px; }
+    .main__section-text {
+      color: var(--colorBlue); }
+    .main__section pre {
+      background-color: var(--colorBlack);
+      color: white;
+      width: 500px; }
+    .main__section-code {
+      background-color: var(--colorBlack); }
+    .main__section-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 3px solid #425277;
+      color: #66fcf1; }
+    .main__section th, .main__section td {
+      border: 3px solid #425277;
+      padding: 10px; }
+    .main__section th {
+      background-color: #092321; }
+    .main__section td {
+      background-color: #273b42; }
+
+
+.footer {
+  color: var(--colorLightGray);
+  margin-top: 60px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  background-color: var(--colorBlack); }
+  .footer__link {
+    text-decoration: none;
+    color: #786800;
+    margin-left: 10px; }
+    .footer__link:hover {
+      color: #b29f25; }
+
+
+.form__container{
+    background-color: rgb(65, 96, 109);
+    border-radius: 10px;
+    border: 2px solid #000000;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.sort{
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background-color: rgb(154, 166, 192);
+    width: 200px;
+    height: 50px;
+}
+
+.sort:active{
+    background-color: rgb(103, 106, 113);
+}
+
+.add__card{
+  border-radius: 10px;
+  border: 2px solid #000000;
+  background-color: rgb(154, 166, 192);
+  width: 200px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.add__card:active{
+  background-color: rgb(103, 106, 113);
+}
+
+.star {
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(40, 40, 40);
+}
+
+.star.selected {
+    color: gold;
+}
+
+.header__time-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.time_btn{
+    border-radius: 5px;
+    border: 2px solid #000000;
+    background-color: rgb(118, 166, 168);
+    width: 150px;
+    height: 30px;
+}
+
+.greeting{
+    border-radius: 5px;
+    border: 2px solid #000000;
+    background-color: rgb(118, 166, 168);
+    width: 150px;
+    height: 30px;
+}
+
+.card{
+  padding: 20px;
+  margin-bottom: 40px;
+  transform: translateX(0);
+  transition: .8s ease;
+  opacity: 1;
+  min-width: 800px;
+  min-height: 300px;
+}
+
+.search{
+  width: 400px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.notshow {
+  opacity: 0;
+  transform: translateX(300px);
+}
+
+.dialog{
+  background-color: #77b8c2;
+  width: 600px;
+  height: 350px;
+}
+
+.dialog__form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px
+}
+
+.form__divider{
+  display: flex;
+  flex-direction: column;
+}
+
+#card_title{
+  width: 400px;
+  border-radius: 5px;
+}
+
+#card_description{
+  width: 400px;
+  border-radius: 5px;
+  resize: none;
+}
+
+.dialog__create{
+  border-radius: 5px;
+  border: 2px solid #000000;
+  background-color: rgb(62, 171, 69);
+  width: 150px;
+  height: 30px;
+}
+
+.dialog__cancel{
+  border-radius: 5px;
+  border: 2px solid #000000;
+  background-color: rgb(217, 59, 45);
+  width: 150px;
+  height: 30px;
+}
+/*# sourceMappingURL=mainpage.css.map */

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="mainpage.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary bg-opacity-50">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-4 fs-4">
+                        <a class="nav-link" href="home.html">
+                            <strong class="text-info text-opacity-75">Home</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item px-4 fs-4">
+                        <a class="nav-link" href="mainpage.html">
+                            <strong class="text-info text-opacity-75">Main</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item px-4 fs-4">
+                        <a class="nav-link" href="contactus.html">
+                            <strong class="text-info text-opacity-75">Contact us</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item px-4 fs-4">
+                        <a class="nav-link active" href="aboutus.html">
+                            <strong class="text-info text-opacity-75">About us</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center py-3">
+        <h2 class="header__time py-4 text-white">Current Time</h2>
+        <div class="header__time-btns mb-3">
+            <button class="time_btn">Get time</button>
+            <button class="greeting">Hello</button>
+        </div>
+
+        <div class="rating">
+            <span class="star" data-value="1">☆</span>
+            <span class="star" data-value="2">☆</span>
+            <span class="star" data-value="3">☆</span>
+            <span class="star" data-value="4">☆</span>
+            <span class="star" data-value="5">☆</span>
+        </div>
+
+        <h1 class="text-white">Popular Programming Languages</h1>
+        <nav class="header__nav">
+            <ul class="list-inline">
+                <li class="list-inline-item px-3">
+                    <a class="text-info text-opacity-75" href="#python">Python</a>
+                </li>
+                <li class="list-inline-item px-3">
+                    <a class="text-info text-opacity-75" href="#javascript">JavaScript</a>
+                </li>
+                <li class="list-inline-item px-3">
+                    <a class="text-info text-opacity-75" href="#java">Java</a>
+                </li>
+                <li class="list-inline-item px-3">
+                    <a class="text-info text-opacity-75" href="#cpp">C++</a>
+                </li>
+                <li class="list-inline-item px-3">
+                    <a class="text-info text-opacity-75" href="#ruby">Ruby</a>
+                </li>
+                <li class="list-inline-item px-3">
+                    <a class="text-info text-opacity-75" href="#swift">Swift</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container d-flex flex-column align-items-center">
+
+        <input type="text" id="search" class="search py-2" placeholder="Search">
+
+        <div class="card__container d-flex flex-column align-items-center">
+            <section id="python" class="card col-lg-10 col-md-11 col-sm-12 bg-dark border border-info border-4 rounded">
+                <h2 class="d-flex align-items-center text-info mb-3">
+                    <img class="mx-2" src="images/mainpage-py.png" style="width: 20px;"> Python
+                </h2>
+                <p class="text-light">Python is renowned for its readability and simplicity.<br><br>
+                    It's an excellent choice for beginners and is widely used in various domains such as web development, data analysis, artificial intelligence, and scientific computing.
+                </p>
+                <pre class="bg-black text-white col-lg-6 col-md-8 col-sm-10">
+                    <code>
+    # Example Python code
+
+    def greet(name):
+        return f"Hello, {name}!"
+    print(greet("World"))
+                    </code>
+                </pre>
+            </section>
+
+            <section id="javascript" class="card col-lg-10 col-md-11 col-sm-12 bg-dark border border-info border-4 rounded">
+                <h2 class="d-flex align-items-center text-info mb-3">
+                    <img class="mx-2" src="images/mainpage-js.png" style="width: 20px;"> JavaScript
+                </h2>
+                <p class="text-light">JavaScript is the cornerstone of web development, used to create dynamic and interactive web pages.<br><br>
+                    It is also utilized in server-side programming through environments like Node.js.</p>
+                <pre class="bg-black text-white col-lg-6 col-md-8 col-sm-10">
+                    <code>
+    // Example JavaScript code
+
+    function greet(name) {
+        return `Hello, ${name}!`;
+    }
+    console.log(greet("World"));
+                    </code>
+                </pre>
+            </section>
+
+            <section id="java" class="card col-lg-10 col-md-11 col-sm-12 bg-dark border border-info border-4 rounded">
+                <h2 class="d-flex align-items-center text-info mb-3">
+                    <img class="mx-2" src="images/mainpage-java.png" style="width: 40px;"> Java
+                </h2>
+                <p class="text-light">Java is known for its portability across different platforms and is widely used in enterprise environments, Android app development, and large-scale systems.<br><br>
+                    Its robust performance and security features make it a popular choice for complex applications.</p>
+                <pre class="bg-black text-white col-lg-6 col-md-8 col-sm-10">
+                    <code>
+    // Example Java code
+
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
+    }
+                    </code>
+                </pre>
+            </section>
+
+            <section id="cpp" class="card col-lg-10 col-md-11 col-sm-12 bg-dark border border-info border-4 rounded">
+                <h2 class="d-flex align-items-center text-info mb-3">
+                    <img class="mx-2" src="images/mainpage-cpp.png" style="width: 24px;"> C++
+                </h2>
+                <p class="text-light">C++ offers powerful performance and control over system resources, making it suitable for high-performance applications, game development, and systems programming.<br><br>
+                    Its complex syntax and features require a steep learning curve.</p>
+                <pre class="bg-black text-white col-lg-6 col-md-8 col-sm-10">
+                    <code>
+    // Example C++ code
+
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+        cout << "Hello, World!" << endl;
+        return 0;
+    }
+                    </code>
+                </pre>
+            </section>
+
+            <section id="ruby" class="card col-lg-10 col-md-11 col-sm-12 bg-dark border border-info border-4 rounded">
+                <h2 class="d-flex align-items-center text-info mb-3">
+                    <img class="mx-2" src="images/mainpage-ruby.png" style="width: 24px;"> Ruby
+                </h2>
+                <p class="text-light">Ruby is known for its elegant syntax and is often used in web development, especially with the Ruby on Rails framework.<br><br>
+                    It emphasizes simplicity and productivity, making it a favorite among developers who prioritize clean and readable code.</p>
+                <pre class="bg-black text-white col-lg-6 col-md-8 col-sm-10">
+                    <code>
+    # Example Ruby code
+
+    def greet(name)
+        "Hello, #{name}!"
+    end
+    puts greet("World")
+                    </code>
+                </pre>
+            </section>
+            <section id="swift" class="card col-lg-10 col-md-11 col-sm-12 bg-dark border border-info border-4 rounded">
+                <h2 class="d-flex align-items-center text-info mb-3">
+                    <img class="mx-2" src="images/mainpage-swift.png" style="width: 20px;"> Swift
+                </h2>
+                <p class="text-light">Swift is Apple's programming language for iOS and macOS development.<br><br>
+                    It's designed to be easy to use and offers modern features for safer and more efficient coding. Swift is popular for developing apps on the Apple ecosystem.</p>
+                <pre class="bg-black text-white col-lg-6 col-md-8 col-sm-10">
+                    <code>
+    // Example Swift code
+
+    import Foundation
+
+    func greet(name: String) -> String {
+        return "Hello, \(name)!"
+    }
+    print(greet(name: "World"))
+                    </code>
+                </pre>
+            </section>
+    </div>
+
+    <button class="add__card">Add Element</button>
+
+    <dialog class="dialog">
+        <form class="dialog__form" method="dialog">
+            <h2>Add new element</h2>
+            <div class="form__divider">
+                <label for="card_title">Title:</label>
+                <input type="text" name="cardTitle" id="card_title" required>
+            </div>
+
+            <div class="form__divider">
+                <label for="card_description">Description:</label>
+                <textarea id="card_description" name="cardDescription" rows="3" required></textarea>
+            </div>
+
+            <div>
+                <button class="dialog__create">Create</button>
+                <button class="dialog__cancel">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+
+
+        <section class="container-fluid mb-4 col-lg-10 col-md-11 col-sm-12">
+            <h2 class="text-center text-white py-1">Language Comparison</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover text-center table-dark">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Language</th>
+                            <th>Popularity</th>
+                            <th>Ease of Learning</th>
+                            <th>Common Uses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Python</td>
+                            <td>High</td>
+                            <td>Easy</td>
+                            <td>Web development, Data analysis, AI</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>High</td>
+                            <td>Moderate</td>
+                            <td>Web development, Server-side scripting</td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>High</td>
+                            <td>Moderate</td>
+                            <td>Enterprise applications, Android development</td>
+                        </tr>
+                        <tr>
+                            <td>C++</td>
+                            <td>Moderate</td>
+                            <td>Challenging</td>
+                            <td>Game development, Systems programming</td>
+                        </tr>
+                        <tr>
+                            <td>Ruby</td>
+                            <td>Moderate</td>
+                            <td>Easy</td>
+                            <td>Web development (Ruby on Rails)</td>
+                        </tr>
+                        <tr>
+                            <td>Swift</td>
+                            <td>Growing</td>
+                            <td>Moderate</td>
+                            <td>iOS/macOS app development</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div id="carouselControls"  class="carousel slide mb-4" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="images/main-c-cpp.jpg" >
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/main-c-java.jpg">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/main-c-js.jpg">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <div class="form__container my-4 ">
+            <h2>Number Sorting Tool</h2>
+
+            <form class="form">
+                <div>
+                    <label for="numbers">Enter numbers</label>
+                    <input type="text" id="numbers" placeholder="1,2,3,4">
+                </div>
+
+                <div>
+                <label for="order">Choose sorting order:</label>
+                    <select id="order" name="order">
+                        <option value="asc">Ascending</option>
+                        <option value="desc">Descending</option>
+                    </select>
+                </div>
+                <button type="button" class="sort my-3">Sort Numbers</button>
+            </form>
+
+            <div class="result py-2">
+                <h4>Sorted Numbers:</h4>
+                <p id="result"></p>
+            </div>
+          </div>
+    </main>
+
+
+    <footer class="footer">
+        Made by <a href="https://github.com/kamilakbarovoop" class="footer__link"> Kamil Akbarov</a>,
+        <a href="https://github.com/Merrorgit" class="footer__link"> Mikhail Zherebtsov</a>
+    </footer>
+
+    <script src="scripts/mainpage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
