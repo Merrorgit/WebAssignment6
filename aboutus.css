@@ -48,7 +48,7 @@ body {
         text-shadow: 0px 0px 20px rgba(102, 252, 241, 0.3);
         transition: .3s; }
 
-.footer {
+.footers {
   color: var(--colorLightGray);
   margin-top: 60px;
   width: 100%;
@@ -56,12 +56,13 @@ body {
   display: flex;
   justify-content: center;
   padding: 30px 0;
-  background-color: var(--colorBlack); }
-  .footer__link {
+  background-color: var(--colorBlack);
+  bottom: 0;}
+  .footers__link {
     text-decoration: none;
     color: #786800;
     margin-left: 10px; }
-    .footer__link:hover {
+    .footers__link:hover {
       color: #b29f25; }
 
 
@@ -92,6 +93,16 @@ body {
 
 .sound__btn:active{
     background-color: rgb(72, 85, 113);
+}
+
+#map{
+  width: 600px;
+  height: 400px
+}
+
+.here{
+  color: white;
+  margin-top:30px ;
 }
 
 /*# sourceMappingURL=aboutus.css.map */
