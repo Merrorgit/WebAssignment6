@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mainpage.html">Main Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <header class="text-center my-4">
+        <h1 class="display-4">Hello World!</h1>
+    </header>
+
+    <main class="container text-light">
+        <section class="row mb-4">
+            <div class="col-lg-4">
+                <h2>Basics of Programming</h2>
+                <p>Welcome to the world of programming! Here you will learn what programming is, why it’s important, and how different programming languages are used in the modern world.</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>What is Programming?</h2>
+                <p>Programming is the process of writing instructions that a computer can understand and execute. It is the foundation of all digital technologies, from simple apps on your smartphone to complex control systems in cars and spacecraft.</p>
+            </div>
+            <div class="col-lg-4">
+              <h2>What is Programming?</h2>
+              <p>Programming is the process of writing instructions that a computer can understand and execute. It is the foundation of all digital technologies, from simple apps on your smartphone to complex control systems in cars and spacecraft.</p>
+          </div>
+        </section>
+
+        <section class="row mb-4">
+            <div class="col-lg-4">
+                <h2>Why is Programming Important?</h2>
+                <p>Today, programming is an integral part of many areas of life. Understanding the basics opens the door to many career opportunities.</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Programming in Everyday Life</h2>
+                <p>Programming affects many aspects of our lives. It underlies all the digital technologies we use daily.</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Ready to Start?</h2>
+                <p>Learning programming is a journey that can change your future.</p>
+            </div>
+            <div class="col-lg-4">
+              <h2>Ready to Start?</h2>
+              <p>Learning programming is a journey that can change your future.</p>
+          </div>
+        </section>
+
+        
+        <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="images/prog.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/prog2.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/prog3.jpg" alt="Third slide">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          
+          <h2>Check your progress with a To Do List</h2>
+          <div id="ToDoDiv" class="headerToDoList">
+            <h2 style="margin:5px">My To Do List</h2>
+            <input type="text" id="ToDoInput" placeholder="Write somethig...">
+            <button onclick="newElement()" class="addBtn">Add</button>
+        </div>
+        
+        <ul id="ToDoUL" class="todo-list">
+        </ul>
+        <audio id="addsound" src="addsound.wav"></audio>
+        <button id="theme-toggle">Switch to Light Theme</button>
+    </main>
+
+    <footer class="footer bg-dark text-light text-center py-4">
+        Made by <a href="https://github.com/kamilakbarovoop" class="text-light">Kamil Akbarov</a>,
+        <a href="https://github.com/Merrorgit" class="text-light">Mikhail Zherebtsov</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+</html>

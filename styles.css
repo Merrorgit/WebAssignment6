@@ -1,0 +1,182 @@
+:root {
+    --colorBlack: #0b0c10;
+    --colorGray: #1f2833;
+    --colorLightGray: #c5c6c7;
+    --colorLightBlue: #66fcf1;
+    --colorBlue: #45a29e;
+}
+
+.light-theme {
+    --colorBlack: #ffffff;
+    --colorGray: #f0f0f0;
+    --colorLightGray: #333;
+    --colorLightBlue: #007bff;
+    --colorBlue: #0056b3;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    background-color: var(--colorGray);
+}
+
+header {
+    color: var(--colorLightBlue);
+    text-shadow: 1px 1px 5px var(--colorBlue);
+}
+
+.footer {
+    background: linear-gradient(to top, var(--colorBlack), var(--colorGray));
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.4);
+    border-top: 2px solid var(--colorBlue);
+}
+
+.footer a {
+    color: var(--colorLightGray);
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--colorLightBlue);
+    text-shadow: 1px 1px 5px var(--colorBlue);
+}
+
+.headerToDoList {
+    background-color: var(--colorGray);
+    padding: 30px 40px;
+    color: var(--colorLightGray);
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.addBtn {
+    padding: 10px;
+    width: 20%;
+    background: var(--colorLightBlue);
+    color: #555;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 15px;
+}
+
+.addBtn:hover {
+    background-color: var(--colorLightGray);
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list li {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: var(--colorGray);
+    font-size: 18px;
+    cursor: move;
+    margin-bottom: 5px;
+}
+
+.todo-list li.checked {
+    background: var(--colorBlack);
+    color: var(--colorLightGray);
+}
+
+.deleteBtn {
+    background: var(--colorLightBlue);
+    color: var(--colorBlack);
+    border: none;
+    padding: 5px 10px; 
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.deleteBtn:hover {
+    background-color: #66c3c1;
+}
+
+.completeBtn {
+    background: var(--colorLightBlue);
+    color: var(--colorBlack);
+    border: none;
+    padding: 5px 10px; 
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.completeBtn:hover {
+    background-color: #66c3c1;
+}
+
+form {
+    background-color: var(--colorGray);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    margin: auto; 
+}
+
+.form-label {
+    color: var(--colorLightGray);
+    display: block; 
+    margin-bottom: 8px; 
+}
+
+input {
+    border: 1px solid var(--colorLightGray);
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--colorBlack);
+    color: var(--colorLightGray);
+    margin: 10px 0;
+}
+
+.sendBtn {
+    padding: 10px 20px;
+    background: var(--colorLightBlue); 
+    color: var(--colorBlack); 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-top: 10px; 
+    display: block; 
+    width: 100%;
+}
+
+.sendBtn:hover {
+    background-color: var(--colorLightGray);
+}
+
+#theme-toggle {
+    position: fixed;
+    bottom: 50px;
+    left: 40px;
+    padding: 10px 20px;
+    background: var(--colorLightBlue); 
+    color: var(--colorBlack); 
+    border: none; 
+    border-radius: 4px;
+    font-size: 16px; 
+}
+
+#theme-toggle:hover {
+    background-color: var(--colorLightGray);
+}
+
+.dragging {
+    transform: scale(1.05);
+    background: var(--colorLightBlue);
+}
