@@ -96,8 +96,15 @@ body {
 }
 
 #map{
-  width: 600px;
-  height: 400px
+  width: 60vw;
+  height: 50vh;
+}
+
+.maps{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .here{
