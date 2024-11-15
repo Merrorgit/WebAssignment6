@@ -1,14 +1,13 @@
 //Time getting and greeting
-const time_btn = document.querySelector('.time_btn')
 const greeting = document.querySelector('.greeting')
 
-time_btn.addEventListener('click', () => {
+const time = () => {
     const time = document.querySelector('.header__time');
     const nowTime = new Date();
     const dateTime = nowTime.toLocaleTimeString();
 
     time.textContent = dateTime;
-})
+}
 
 greeting.addEventListener('click', () => {
     const now = new Date();
@@ -32,8 +31,8 @@ greeting.addEventListener('click', () => {
     alert(greeting);
 })
 
-
-
+time();
+setInterval(time, 1000)
 
 //Sorting tool
 const sortButt = document.querySelector('.sort');
@@ -134,13 +133,19 @@ searchBtn.addEventListener('input', function () {
 
 
 //Add Card
-
 const addBtn = document.querySelector('.add__card');
 const cardDialog = document.querySelector('.dialog');
 const cardForm = document.querySelector('.dialog__form')
 const cardsContainer = document.querySelector('.card__container');
 const createBtn = document.querySelector('.dialog__create');
 const cancelBtn = document.querySelector('.dialog__cancel');
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedCards = JSON.parse(localStorage.getItem('cards')) || [];
+    savedCards.forEach((card) => {
+        createCard(card.title, card.description, card.id);
+    });
+});
 
 addBtn.addEventListener('click', () => {
     cardDialog.showModal();
@@ -150,19 +155,43 @@ createBtn.addEventListener('click', () => {
     const cardTitle = document.getElementById('card_title').value;
     const cardDescription = document.getElementById('card_description').value;
 
-    const newCard = document.createElement('section');
-    newCard.classList.add('card', 'col-lg-10', 'col-md-11', 'col-sm-12', 'bg-dark', 'border', 'border-info', 'border-4', 'rounded');
-    newCard.innerHTML = `
-        <h2 class="d-flex align-items-center text-info mb-3">
-            ${cardTitle}
-        </h2>
-        <p class="text-light">${cardDescription}</p>
-    `;
+    const newCard = { title: cardTitle, description: cardDescription, id: Date.now() };
 
-    cardsContainer.appendChild(newCard);
+    createCard(cardTitle, cardDescription, newCard.id);
+
+    toLocalStorage(newCard);
+
     cardForm.reset();
     cardDialog.close();
 });
+
+const toLocalStorage = (newCard) => {
+    const savedCards = JSON.parse(localStorage.getItem('cards')) || [];
+    savedCards.push(newCard);
+    localStorage.setItem('cards', JSON.stringify(savedCards));
+}
+
+const createCard = (title, description, id) => {
+    const newCard = document.createElement('section');
+    newCard.classList.add('card', 'col-lg-8', 'col-md-9', 'col-sm-10', 'col-11', 'bg-dark', 'p-3','border', 'border-info', 'border-4', 'rounded');
+    newCard.setAttribute('data', id);
+
+    newCard.innerHTML = `
+        <h2 class="d-flex align-items-center text-info mb-3">
+            ${title}
+        </h2>
+        <p class="text-light">${description}</p>
+        <button class="btn btn-danger col-lg-2 col-md-3 col-sm-4 col-4 delete-btn">Delete</button>`;
+        
+    cardsContainer.appendChild(newCard);
+
+    const deleteBtn = newCard.querySelector('.delete-btn');
+    deleteBtn.addEventListener('click', () => {
+        deleteCard(newCard, id);
+    });
+
+    cardsContainer.appendChild(newCard);
+}
 
 
 cancelBtn.addEventListener('click', () => {
@@ -170,4 +199,10 @@ cancelBtn.addEventListener('click', () => {
     cardDialog.close();
 });
 
+const deleteCard = (cardElement, cardId) => {
+    cardElement.remove();
 
+    const savedCards = JSON.parse(localStorage.getItem('cards')) || [];
+    const updatedCards = savedCards.filter(card => card.id !== cardId);
+    localStorage.setItem('cards', JSON.stringify(updatedCards));
+}
