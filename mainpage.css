@@ -159,6 +159,20 @@ body {
   height: 30px;
 }
 
+.carousel__speed{
+  color:  var(--colorLightGray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.carousel__range{
+  width: 30vw;
+  margin-top: -12px;
+}
+
+
 @media (max-width: 968px) {
   .footer{
     font-size: 14px;

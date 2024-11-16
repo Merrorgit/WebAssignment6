@@ -206,3 +206,17 @@ const deleteCard = (cardElement, cardId) => {
     const updatedCards = savedCards.filter(card => card.id !== cardId);
     localStorage.setItem('cards', JSON.stringify(updatedCards));
 }
+
+
+//Carousel speed
+const value = document.querySelector('.carousel__value');
+const input = document.querySelector('.carousel__range');
+const carouselItems = document.querySelectorAll('.carousel-item')
+
+input.addEventListener("input", (event) => {
+    value.textContent = `Carousel speed: ${event.target.value}`;
+  
+    carouselItems.forEach(item => {
+      item.setAttribute('data-bs-interval', event.target.value * 1000);
+  });
+});
