@@ -177,6 +177,14 @@ body {
   .footer{
     font-size: 14px;
   }
+
+  .carousel__range{
+    width: 40vw;
+    margin-top: -14px;
+  }
+  .carousel__speed{
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=mainpage.css.map */
