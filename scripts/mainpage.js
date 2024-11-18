@@ -63,26 +63,6 @@ sortButt.addEventListener('click', () => {
 })
 
 
-//Star Rating
-const stars = document.querySelectorAll('.star');
-
-stars.forEach(star => {
-    star.addEventListener('click', () => {
-        const rating = star.getAttribute('data-value');
-
-        stars.forEach(s => {
-            s.textContent = '☆';
-            s.classList.remove('selected');
-        });
-
-        for (let i = 0; i < rating; i++) {
-            stars[i].textContent = '★';
-            stars[i].classList.add('selected');
-        }
-    });
-});
-
-
 //Keys
 document.addEventListener('keydown', (e) => {
     const navItems = document.querySelectorAll('.header__nav a');

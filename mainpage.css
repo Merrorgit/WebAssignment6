@@ -73,18 +73,8 @@ body {
   margin-bottom: 20px;
 }
 
-.add__card:active{
+.add__card:hover{
   background-color: rgb(103, 106, 113);
-}
-
-.star {
-    font-size: 30px;
-    cursor: pointer;
-    color: rgb(214, 214, 214);
-}
-
-.star.selected {
-    color: gold;
 }
 
 .header__time-btns{
@@ -183,6 +173,32 @@ body {
   margin-top: -12px;
 }
 
+.quiz{
+  border-radius: 10px;
+  border: 2px solid #000000;
+  background-color: rgb(102, 142, 228);
+  width: 200px;
+  height: 50px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.quiz:hover{
+  background-color: rgb(77, 113, 189);
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
 @media (max-width: 968px) {
   .footer{
     font-size: 14px;
@@ -208,6 +224,12 @@ body {
     width: 240px;
     height: 160px;
   }
+
+  .buttons{
+    flex-direction: column;
+    gap: 10px;
+  }
 }
+
 
 /*# sourceMappingURL=mainpage.css.map */
