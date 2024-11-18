@@ -175,7 +175,6 @@ const createCard = (title, description, id) => {
     const newCard = document.createElement('section');
     newCard.classList.add('card', 'col-lg-8', 'col-md-9', 'col-sm-10', 'col-11', 'bg-dark', 'p-3','border', 'border-info', 'border-4', 'rounded');
     newCard.setAttribute('data', id);
-
     newCard.innerHTML = `
         <h2 class="d-flex align-items-center text-info mb-3">
             ${title}
@@ -183,8 +182,6 @@ const createCard = (title, description, id) => {
         <p class="text-light">${description}</p>
         <button class="btn btn-danger col-lg-2 col-md-3 col-sm-4 col-4 delete-btn">Delete</button>`;
         
-    cardsContainer.appendChild(newCard);
-
     const deleteBtn = newCard.querySelector('.delete-btn');
     deleteBtn.addEventListener('click', () => {
         deleteCard(newCard, id);
